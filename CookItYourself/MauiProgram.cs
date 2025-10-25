@@ -6,7 +6,7 @@ namespace CookItYourself
     public static class MauiProgram
     {
         public static MauiApp CreateMauiApp()
-        {
+        {//Testing commit
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
