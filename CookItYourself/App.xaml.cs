@@ -1,4 +1,4 @@
-﻿namespace CookItYourself
+namespace CookItYourself
 {
     public partial class App : Application
     {

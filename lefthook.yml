@@ -1,0 +1,7 @@
+pre-commit:
+  parallel: true
+  commands:
+    dotnet_format:
+      run: dotnet format --verify-no-changes
+    build:
+      run: dotnet build

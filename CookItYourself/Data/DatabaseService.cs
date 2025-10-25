@@ -1,4 +1,4 @@
-﻿using CookItYourself.Models;
+using CookItYourself.Models;
 using SQLite;
 
 namespace CookItYourself.Data

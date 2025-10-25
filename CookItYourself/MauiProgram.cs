@@ -1,4 +1,4 @@
-﻿using CookItYourself.Data;
+using CookItYourself.Data;
 using Microsoft.Extensions.Logging;
 
 namespace CookItYourself
@@ -17,7 +17,7 @@ namespace CookItYourself
                 });
 
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
             // Define target DB path in local app folder
             string dbName = "RecipeDB.db";

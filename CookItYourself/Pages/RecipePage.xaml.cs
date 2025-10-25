@@ -1,5 +1,5 @@
-using CookItYourself.ViewModels;
 using CookItYourself.Data;
+using CookItYourself.ViewModels;
 
 namespace CookItYourself.Pages;
 
