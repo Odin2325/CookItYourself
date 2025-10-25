@@ -1,0 +1,21 @@
+#!/bin/bash
+echo "🔧 Running pre-commit checks..."
+
+# --- Auto-format code ---
+echo "🧹 Running dotnet format..."
+dotnet format
+if [ $? -ne 0 ]; then
+  echo "⚠️ dotnet format encountered issues, please review the changes."
+fi
+
+# --- Build the project ---
+echo "⚙️ Building project..."
+dotnet build
+if [ $? -ne 0 ]; then
+  echo "❌ Build failed! Fix errors before committing."
+  exit 1
+fi
+
+echo "✅ Code formatted and build successful."
+
+chmod +x .git/hooks/pre-commit

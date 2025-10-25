@@ -1,3 +1,6 @@
+# Keep our shared Git hooks
+!git-hooks/
+
 # Build results
 bin/
 obj/

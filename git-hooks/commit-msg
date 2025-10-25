@@ -1,0 +1,27 @@
+#!/bin/bash
+COMMIT_MSG_FILE=$1
+COMMIT_MSG=$(head -n1 "$COMMIT_MSG_FILE")
+
+echo "🔍 Validating commit message..."
+
+# Define allowed prefixes
+if [[ ! "$COMMIT_MSG" =~ ^(Update:|Fix:|New Resources:|Refactor:|Remove:|Docs:|Test:|Chore:)\  ]]; then
+  echo "❌ Invalid commit message format."
+  echo "Allowed formats are:"
+  echo "  - Update: ..."
+  echo "  - Fix: ..."
+  echo "  - New Resources: ..."
+  echo "  - Refactor: ..."
+  echo "  - Remove: ..."
+  echo "  - Docs: ..."
+  echo "  - Test: ..."
+  echo "  - Chore: ..."
+  echo ""
+  echo "Example:  git commit -m 'Update: Adjust RecipeViewModel binding'"
+  exit 1
+fi
+
+echo "✅ Commit message looks good!"
+
+
+chmod +x .git/hooks/commit-msg
