@@ -24,4 +24,4 @@ fi
 echo "✅ Commit message looks good!"
 
 
-chmod +x .git/hooks/commit-msg
+chmod +x git-hooks/commit-msg
