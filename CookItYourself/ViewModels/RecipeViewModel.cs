@@ -5,7 +5,7 @@ using CookItYourself.Models;
 namespace CookItYourself.ViewModels
 {
     public class RecipeViewModel : BindableObject
-    {
+    {// Test Git Push
         private readonly DatabaseService _db;
         public ObservableCollection<Recipe> Recipes { get; } = new();
 
